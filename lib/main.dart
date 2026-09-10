@@ -1,61 +1,82 @@
-import 'package:Cafe_Night_Trails/controllers/main_controller.dart';
-import 'package:Cafe_Night_Trails/screens/account_view.dart';
-import 'package:Cafe_Night_Trails/screens/contact_view.dart';
-import 'package:Cafe_Night_Trails/screens/login_view.dart';
-import 'package:Cafe_Night_Trails/screens/menu_view.dart';
-import 'package:Cafe_Night_Trails/screens/sign_up_view.dart';
-import 'package:Cafe_Night_Trails/utils/app_theme_data.dart';
-import 'package:Cafe_Night_Trails/utils/string_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import '../screens/home_view.dart';
+
+import 'theme/app_theme.dart';
+import 'widgets/nav_bar.dart';
+import 'widgets/hero_section.dart';
+import 'widgets/rooms_section.dart';
+import 'widgets/cafe_section.dart';
+import 'widgets/parking_section.dart';
+import 'widgets/contact_section.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const NightTrailsApp());
 }
 
-class MyApp extends StatelessWidget {
-  MyApp({super.key});
-
-  final MainController mainController = Get.put(MainController());
+class NightTrailsApp extends StatelessWidget {
+  const NightTrailsApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return (GetMaterialApp(
+    return MaterialApp(
+      title: 'The Night Trails',
       debugShowCheckedModeBanner: false,
-      initialRoute: StringUtils.routeHome,
-      theme: AppThemeData.appTheme,
-      getPages: [
-        GetPage(
-          name: StringUtils.routeHome,
-          page: () => HomeView(
-              title: 'Northern Trails',
-              subtitle: 'Welcome',
-              mainController: mainController),
-        ),
-        GetPage(
-          name: StringUtils.routeContact,
-          page: () => const ContactView(),
-        ),
-        GetPage(
-          name: StringUtils.routeMenu,
-          page: () => MenuView(
-            mainController: mainController,
+      theme: AppTheme.theme,
+      home: const HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final GlobalKey _roomsKey = GlobalKey();
+  final GlobalKey _cafeKey = GlobalKey();
+  final GlobalKey _parkingKey = GlobalKey();
+  final GlobalKey _contactKey = GlobalKey();
+
+  void _scrollTo(GlobalKey key) {
+    final ctx = key.currentContext;
+    if (ctx != null) {
+      Scrollable.ensureVisible(
+        ctx,
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.easeInOutCubic,
+      );
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppTheme.ink,
+      body: Column(
+        children: [
+          NavBar(
+            onRoomsTap: () => _scrollTo(_roomsKey),
+            onCafeTap: () => _scrollTo(_cafeKey),
+            onParkingTap: () => _scrollTo(_parkingKey),
+            onContactTap: () => _scrollTo(_contactKey),
           ),
-        ),
-        GetPage(
-          name: StringUtils.routeLogin,
-          page: () => const LoginView(),
-        ),
-        GetPage(
-          name: StringUtils.routeSignUp,
-          page: () => const SignUpView(),
-        ),
-        GetPage(
-          name: StringUtils.routeAccount,
-          page: () => const AccountView(),
-        ),
-      ],
-    ));
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  HeroSection(onBookTap: () => _scrollTo(_contactKey)),
+                  Container(key: _roomsKey, child: const RoomsSection()),
+                  Container(key: _cafeKey, child: const CafeSection()),
+                  Container(key: _parkingKey, child: const ParkingSection()),
+                  Container(key: _contactKey, child: const ContactSection()),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
