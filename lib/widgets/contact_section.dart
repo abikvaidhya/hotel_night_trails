@@ -34,7 +34,8 @@ class ContactSection extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Book a room', style: Theme.of(context).textTheme.headlineMedium),
+                    Text('Book a room',
+                        style: Theme.of(context).textTheme.headlineMedium),
                     const SizedBox(height: 16),
                     Text(
                       'Call or write to us directly — we keep the desk small on purpose.',
@@ -52,7 +53,8 @@ class ContactSection extends StatelessWidget {
                                 .toList(),
                           ),
                     const SizedBox(height: 48),
-                    Text('Find us', style: Theme.of(context).textTheme.titleLarge),
+                    Text('Find us',
+                        style: Theme.of(context).textTheme.titleLarge),
                     const SizedBox(height: 16),
                   ],
                 ),
@@ -70,8 +72,11 @@ class ContactSection extends StatelessWidget {
           const SizedBox(height: 48),
           Center(
             child: Text(
-              '© 2026 The Night Trails. All rights reserved.',
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontSize: 13),
+              '© 2026 Hotel Night Trails. All rights reserved.',
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyMedium
+                  ?.copyWith(fontSize: 13),
             ),
           ),
         ],
@@ -97,7 +102,8 @@ class ContactSection extends StatelessWidget {
         icon: Icons.place_outlined,
         label: 'Address',
         value: address,
-        onTap: () => _launch('https://maps.google.com/?q=${Uri.encodeComponent(address)}'),
+        onTap: () => _launch(
+            'https://maps.google.com/?q=${Uri.encodeComponent(address)}'),
       ),
     ];
   }

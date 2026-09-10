@@ -106,7 +106,8 @@ class _RoomCard extends StatelessWidget {
           const SizedBox(height: 14),
           Text(
             room.name,
-            style: Theme.of(context).textTheme.titleLarge?.copyWith(fontSize: 18),
+            style:
+                Theme.of(context).textTheme.titleLarge?.copyWith(fontSize: 18),
           ),
           const SizedBox(height: 6),
           Text(
@@ -118,7 +119,10 @@ class _RoomCard extends StatelessWidget {
           const SizedBox(height: 8),
           Text(
             room.price,
-            style: Theme.of(context).textTheme.labelLarge?.copyWith(color: AppTheme.lantern),
+            style: Theme.of(context)
+                .textTheme
+                .labelLarge
+                ?.copyWith(color: AppTheme.lantern),
           ),
         ],
       ),

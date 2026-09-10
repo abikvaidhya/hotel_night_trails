@@ -32,17 +32,15 @@ class CafeSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text('The Understory Café',
+        Text('The Night Trails Café',
             style: Theme.of(context).textTheme.headlineMedium),
         const SizedBox(height: 16),
         Text(
-          'On the ground floor, open to guests and passersby alike. Coffee '
-          'from 6am for early starts, and a short kitchen menu through '
-          'the evening for anyone who came back tired.',
+          'On the ground floor, open to guests and passersby alike. Coffee from 8:00 AM and a short kitchen menu through\nthe evening for anyone who came back tired.',
           style: Theme.of(context).textTheme.bodyLarge,
         ),
         const SizedBox(height: 20),
-        const _InfoRow(Icons.schedule, 'Open daily, 6:00am – 10:00pm'),
+        const _InfoRow(Icons.schedule, 'Open daily, 8:00 AM – 8:00 PM'),
         const SizedBox(height: 8),
         const _InfoRow(
             Icons.location_on_outlined, 'Ground floor, main lobby entrance'),

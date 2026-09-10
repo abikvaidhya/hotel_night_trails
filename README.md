@@ -1,6 +1,6 @@
 # The Night Trails
 
-A single-page Flutter Web site for Hotel Night Trails: room gallery,
+A single-page Flutter Web site for a Hotel Night Trails: room gallery,
 café, front-courtyard parking, and a contact/booking section with an
 embedded map.
 
@@ -19,6 +19,4 @@ To produce a deployable build:
 
 ```bash
 flutter build web
-# output lands in build/web — host that folder anywhere static
-# (Firebase Hosting, Netlify, GitHub Pages, S3, etc.)
 ```

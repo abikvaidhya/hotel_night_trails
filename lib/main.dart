@@ -18,7 +18,7 @@ class NightTrailsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'The Night Trails',
+      title: 'Hotel Night Trails',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.theme,
       home: const HomePage(),

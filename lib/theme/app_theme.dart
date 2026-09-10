@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-/// Design tokens for The Night Trails.
-///
-/// Palette:
 ///   ink       #0F1620  — midnight background
 ///   panel     #1B2A3A  — deep slate blue, alternating section background
 ///   lantern   #C89B5C  — warm brass/gold accent (the one bold color)
 ///   parchment #EDE6D8  — warm off-white text on dark
 ///   sage      #7A8B7F  — muted secondary accent, used sparingly
 ///   charcoal  #2A2621  — text-on-light / button label color
+///
 class AppTheme {
   static const Color ink = Color(0xFF0F1620);
   static const Color panel = Color(0xFF1B2A3A);

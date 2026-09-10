@@ -21,7 +21,8 @@ class MapEmbed extends StatelessWidget {
     if (!_registered.contains(viewType)) {
       ui_web.platformViewRegistry.registerViewFactory(viewType, (int viewId) {
         final iframe = html.IFrameElement()
-          ..src = 'https://maps.google.com/maps?q=${Uri.encodeComponent(query)}&output=embed'
+          ..src =
+              'https://maps.google.com/maps?q=${Uri.encodeComponent(query)}&output=embed'
           ..style.border = '0'
           ..style.width = '100%'
           ..style.height = '100%';

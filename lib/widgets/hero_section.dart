@@ -46,7 +46,7 @@ class HeroSection extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
                   Text(
-                    'The Night Trails — a small hotel for people\nwho walk far.',
+                    'Hotel Night Trails — a small hotel for people\nwho walk far.',
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyLarge,
                   ),

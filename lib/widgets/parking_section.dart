@@ -40,7 +40,8 @@ class ParkingSection extends StatelessWidget {
           style: Theme.of(context).textTheme.bodyLarge,
         ),
         const SizedBox(height: 20),
-        const _InfoRow(Icons.directions_car_outlined, 'Free for registered guests'),
+        const _InfoRow(
+            Icons.directions_car_outlined, 'Free for registered guests'),
         // const SizedBox(height: 8),
         // const _InfoRow(Icons.bolt_outlined, '2 EV charging spaces'),
         const SizedBox(height: 8),

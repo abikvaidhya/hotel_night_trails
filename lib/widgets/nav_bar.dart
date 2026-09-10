@@ -25,8 +25,9 @@ class NavBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            'The Night Trails',
-            style: Theme.of(context).textTheme.titleLarge?.copyWith(fontSize: 20),
+            'Hotel Night Trails',
+            style:
+                Theme.of(context).textTheme.titleLarge?.copyWith(fontSize: 20),
           ),
           if (!isNarrow)
             Row(
