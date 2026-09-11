@@ -1,11 +1,11 @@
 {
-  "name": "hotel_night_trails",
-  "short_name": "hotel_night_trails",
+  "name": "Hotel Night Trails",
+  "short_name": "HNT",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#0175C2",
   "theme_color": "#0175C2",
-  "description": "A new Flutter project.",
+  "description": "Hotel Night Trails Website",
   "orientation": "portrait-primary",
   "prefer_related_applications": false,
   "icons": [
