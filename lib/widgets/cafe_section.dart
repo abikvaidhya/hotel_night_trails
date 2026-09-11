@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../screens/cafe_menu_screen.dart';
 import '../theme/app_theme.dart';
 
 class CafeSection extends StatelessWidget {
@@ -32,7 +33,7 @@ class CafeSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text('The Night Trails Café',
+        Text('Northern Trails Café',
             style: Theme.of(context).textTheme.headlineMedium),
         const SizedBox(height: 16),
         Text(
@@ -47,22 +48,27 @@ class CafeSection extends StatelessWidget {
       ],
     );
 
-    return Container(
-      color: AppTheme.panel,
-      padding: const EdgeInsets.symmetric(vertical: 72, horizontal: 32),
-      child: Center(
-        child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 1100),
-          child: isNarrow
-              ? Column(children: [image, const SizedBox(height: 32), text])
-              : Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Expanded(child: image),
-                    const SizedBox(width: 56),
-                    Expanded(child: text),
-                  ],
-                ),
+    return GestureDetector(
+      onTap: () => Navigator.of(context).push(
+        MaterialPageRoute(builder: (context) => const CafeMenuScreen()),
+      ),
+      child: Container(
+        color: AppTheme.panel,
+        padding: const EdgeInsets.symmetric(vertical: 72, horizontal: 32),
+        child: Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 1100),
+            child: isNarrow
+                ? Column(children: [image, const SizedBox(height: 32), text])
+                : Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Expanded(child: image),
+                      const SizedBox(width: 56),
+                      Expanded(child: text),
+                    ],
+                  ),
+          ),
         ),
       ),
     );

@@ -41,7 +41,7 @@ class ParkingSection extends StatelessWidget {
         ),
         const SizedBox(height: 20),
         const _InfoRow(
-            Icons.directions_car_outlined, 'Free for registered guests'),
+            Icons.directions_car_outlined, 'Free for registered our guests'),
         // const SizedBox(height: 8),
         // const _InfoRow(Icons.bolt_outlined, '2 EV charging spaces'),
         const SizedBox(height: 8),

@@ -8,7 +8,7 @@ class ContactSection extends StatelessWidget {
 
   static const phone = '+97761590432';
   static const email = 'stay@thenighttrails.com';
-  static const address = '6XC3+QX Pokhara, Gandaki Province, Nepal';
+  static const address = 'Hotel Night Trails, Pokhara, Gandaki Province, Nepal';
 
   Future<void> _launch(String uri) async {
     final u = Uri.parse(uri);
@@ -103,7 +103,8 @@ class ContactSection extends StatelessWidget {
         label: 'Address',
         value: address,
         onTap: () => _launch(
-            'https://maps.google.com/?q=${Uri.encodeComponent(address)}'),
+          "https://maps.app.goo.gl/VLAPnyPoDbqBsc7N6")
+            // 'https://maps.google.com/?q=${Uri.encodeComponent(address)}'),
       ),
     ];
   }

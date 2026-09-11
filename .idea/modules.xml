@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/template.iml" filepath="$PROJECT_DIR$/template.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/template_android.iml" filepath="$PROJECT_DIR$/android/template_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hotel_night_trails.iml" filepath="$PROJECT_DIR$/hotel_night_trails.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/hotel_night_trails_android.iml" filepath="$PROJECT_DIR$/android/hotel_night_trails_android.iml" />
     </modules>
   </component>
 </project>

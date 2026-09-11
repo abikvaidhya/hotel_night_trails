@@ -1,4 +1,4 @@
-import 'dart:html' as html;
+import 'package:web/web.dart' as  web;
 import 'dart:ui_web' as ui_web;
 
 import 'package:flutter/material.dart';
@@ -20,7 +20,7 @@ class MapEmbed extends StatelessWidget {
 
     if (!_registered.contains(viewType)) {
       ui_web.platformViewRegistry.registerViewFactory(viewType, (int viewId) {
-        final iframe = html.IFrameElement()
+        final iframe = web.document.createElement('iframe') as web.HTMLIFrameElement
           ..src =
               'https://maps.google.com/maps?q=${Uri.encodeComponent(query)}&output=embed'
           ..style.border = '0'
