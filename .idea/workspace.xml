@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1edb048-4f0b-4b45-bdd8-edc7fc14aae7" name="Changes" comment="UI changes:&#10;- drawer added for menu and favorites&#10;- font changed&#10;- theme color changed">
-      <change beforePath="$PROJECT_DIR$/web/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/manifest.json" afterDir="false" />
-    </list>
+    <list default="true" id="f1edb048-4f0b-4b45-bdd8-edc7fc14aae7" name="Changes" comment="UI changes:&#10;- drawer added for menu and favorites&#10;- font changed&#10;- theme color changed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
